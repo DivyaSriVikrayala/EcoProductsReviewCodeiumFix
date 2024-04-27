@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eco-Conscious Product Reviews</title>
+  <style>
+    /* CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Eco-Conscious Product Reviews</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Eco-Conscious Product Reviews</h2>
+      <p>Find the best eco-friendly products and leave reviews to support sustainable practices.</p>
+    </section>
+
+    <section id="products">
+      <h2>Our Products</h2>
+      <p>Check out our selection of eco-friendly products.</p>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Learn more about our mission to promote sustainable practices.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us to provide feedback or suggest new products.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2022 Eco-Conscious Product Reviews. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript code here
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substr(1);
+        const target = document.getElementById(targetId);
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
